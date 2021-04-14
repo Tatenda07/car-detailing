@@ -16,6 +16,8 @@ mongoose.connect(process.env.DB_Connection, connectionParams)
         console.error(`Error connecting to the database. \n${err}`);
     })
 
+
+//to connect to local database:
 // mongoose.connect('mongodb://localhost:27017/car-detailing', (err) => {
 //     if (!err)
 //         console.log('Connection succeeded!!!');
