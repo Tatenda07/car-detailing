@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var serviceSchema = new.mongooseSchema({
+var serviceSchema = new mongoose.Schema({
     serviceName: {
         type: String,
         required: true,

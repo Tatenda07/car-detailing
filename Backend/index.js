@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(passport.initialize());
 
 const userController = require('./controllers/userController');
-const serviceController = require('./services/serviceController');
+const serviceController = require('./controllers/serviceController');
 
 
 //handle validation errors within the application
