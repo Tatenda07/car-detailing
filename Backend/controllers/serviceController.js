@@ -4,11 +4,20 @@ const router = express.Router();
 const _ = require('lodash'); 
 require('../models/service.model')
 
-const Service = mongoose.model('User');
+const Service = mongoose.model('Service');
 
 //add new service
 router.post('/',(req, res, next) => {
     const newService = new Service (req.body);
+
+    newService.save((err, doc) => {
+        if(!err)
+            res.send(doc);
+       
+            else {
+                return next(err);
+        }
+    })
 
 });
 
@@ -63,3 +72,23 @@ router.patch('/:id', (req, res, next) => {
     });
 
 });
+
+//delete servicce
+router.delete('/:id', (req, res) => {
+    //check if service exists
+    Service.exists({ _id: req.params.id }).then((result) => {
+        if(!result){
+            return res.status(400).send(`No service record with given id:${req.params.id}`);
+        }else{
+            Service.findByIdAndRemove(req.params.id, (err, doc) => {
+                if (!err) {
+                    res.send(doc);
+                }else{
+                    console.log(`Error: could not delete service: ` +JSON.stringify(err, undefined, 2));
+                }
+            });
+        }
+    });
+});
+
+module.exports = router;
