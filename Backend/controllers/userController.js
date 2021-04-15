@@ -47,7 +47,7 @@ router.get('/user-profile', jwtHelper.verifyJwtToken, (req, res, next) => {
     });
 });
 
-//list all users in the database: localhost:3300/users/
+//list all users in the database: localhost:3000/users/
 router.get('/', (req, res) => {
     User.find((err, docs) => {
         if (!err){

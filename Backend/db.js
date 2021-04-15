@@ -6,7 +6,8 @@ require('dotenv/config');
 const connectionParams = {
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true 
+    useUnifiedTopology: true,
+    useFindAndModify: false 
 }
 mongoose.connect(process.env.DB_Connection, connectionParams)
     .then( () => {
@@ -17,7 +18,7 @@ mongoose.connect(process.env.DB_Connection, connectionParams)
     })
 
 
-//to connect to local database:
+//to connect to localhost database:
 // mongoose.connect('mongodb://localhost:27017/car-detailing', (err) => {
 //     if (!err)
 //         console.log('Connection succeeded!!!');
@@ -25,4 +26,4 @@ mongoose.connect(process.env.DB_Connection, connectionParams)
 //         console.log('Error in DB connection : ' + JSON.stringify(err, undefined, 2));
 // });
 
-// module.exports = mongoose;
+module.exports = mongoose;

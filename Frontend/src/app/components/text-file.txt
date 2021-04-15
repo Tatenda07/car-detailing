@@ -1,1 +1,0 @@
-All components to be created in this folder.
