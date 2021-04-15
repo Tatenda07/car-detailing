@@ -29,7 +29,10 @@ li {
     list-style: none;
     text-decoration: none;
 }
-
+a {
+    text-decoration: none;
+ 
+}
 #navlink-container {
     display: flex;
     flex-direction: row;
@@ -38,4 +41,5 @@ li {
     width: 100%;
     box-sizing: border-box;
     padding: 1vh 2vw;
+    text-decoration: none;
 }
