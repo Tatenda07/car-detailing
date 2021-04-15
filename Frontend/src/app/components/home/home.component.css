@@ -29,7 +29,7 @@ li, a, button {
 }
 
 main{
-    background-image: url(/car-detailing/Frontend/src/app/components/media/pic-7.png);
+    background-image: url(../../../assets/pic-7.png);
     background-size: 100%;
 }
 
@@ -80,7 +80,7 @@ p{
     box-sizing: border-box;
     cursor: pointer;
     margin: 10px 15px;
-    background-image: url(/car-detailing/Frontend/src/app/components/pic-1.jpg);
+    background-image: url(../assets/pic-1.jpg);
     background-position: center;
     background-size: cover;
     transition: transform 0.5;
@@ -88,19 +88,19 @@ p{
 }
 
 .card1 {
-    background-image: url(/car-detailing/Frontend/src/app/components/Media/pic-1.jpg);
+    background-image: url(../../../assets/pic-1.jpg);
 }
 
 .card2 {
-    background-image: url(/car-detailing/Frontend/src/app/components/Media/pic-2.jpg);
+    background-image: url(../../../assets/pic-2.jpg);
 }
 
 .card3 {
-    background-image: url(/car-detailing/Frontend/src/app/components/Media/pic-5.jpg);
+    background-image: url(../../../assets/pic-5.jpg);
 }
 
 .card4 {
-    background-image: url(/car-detailing/Frontend/src/app/components/Media/pic-4.jpg);
+    background-image: url(../../../assets/pic-4.jpg);
 }
 
 .card:hover{
