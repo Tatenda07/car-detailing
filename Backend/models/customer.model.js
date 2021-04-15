@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const connection = require('../db');
 
 var customerSchema = new mongoose.Schema({
     firstName: {
@@ -39,4 +38,4 @@ customerSchema.path('phoneNumber').validate((val) => {
     return phoneNumberRegex.test(val);
 }, 'Invalid phone number.');
 
-module.exports = mongoose.model('customer', customerSchema);
+module.exports = mongoose.model('Customer', customerSchema);
