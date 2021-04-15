@@ -5,6 +5,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent} from './components/contact/contact.component';
 import { ServicesComponent } from './components/services/services.component';
 import { NavbarComponent } from './components/navbar/navbar.component'
+import { ProductsComponent} from './components/products/products.component'
 
 
 
@@ -13,7 +14,8 @@ const routes: Routes = [
 { path: 'about', component: AboutComponent},
 { path: 'contact', component: ContactComponent},
 { path: 'services', component: ServicesComponent},
-{ path: 'navbar', component: NavbarComponent} 
+{ path: 'navbar', component: NavbarComponent} ,
+{ path: 'products', component: ProductsComponent}
 
 ];
 @NgModule({
@@ -21,4 +23,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent, AboutComponent, ContactComponent, ServicesComponent]
+export const routingComponents = [HomeComponent, AboutComponent, ContactComponent, ServicesComponent, ProductsComponent]
