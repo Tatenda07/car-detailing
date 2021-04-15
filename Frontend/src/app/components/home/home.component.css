@@ -4,6 +4,9 @@
     margin: 0;
     padding: 0;
 }
+body {
+    color: aqua;
+}
 
 .logo {
     width: 15%;
@@ -16,47 +19,10 @@ li, a, button {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
-    color: #edf0f1;
+    color: #000000;
     text-decoration: none;
 }
 
-
-header { 
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px 10%;
-    box-sizing: border-box;
-    background-color: grey
-}
-
-.nav__links li {
-    display: inline-block;
-    padding: 20px 20px;
-}
-
-.nav__links li a {
-    transition: all 0.3 ease 0s;
-}
-
-.nav__links li a:hover {
-    color: red;
-}
-
-.cta button {
-    margin-left: 20px;
-    padding: 9px 20px;
-    background-color: rgba(139,0,0);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3 ease 0s;
-}
-
-button:hover{
-    background-color: rgba(255,0,0);
-
-}
 
 .row{
     display: flex;
@@ -77,12 +43,12 @@ main{
 
 h1{
     font-size: 50px;
-    color: whitesmoke;
+    color: rgb(17, 1, 1);
     font-family: 'Montserrat', sans-serif;
 }
 
 p{
-    color:whitesmoke;
+    color:rgb(24, 10, 10);
     font-size: 20px;
     margin: 10px ;
     margin-top: 50px;
@@ -94,7 +60,7 @@ p{
     color: black;
     font-size: 12px 0;
     padding: 12px 0;
-    background: white;
+    background: rgb(189, 17, 17);
     border: 0;
     border-radius: 20px;
     outline: none;

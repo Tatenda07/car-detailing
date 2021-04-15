@@ -1,3 +1,28 @@
-<h1>Routing and Nvigation </h1>
+
+ <header>
+   <div id= "image-container" class="nav-item">
+  <img class="logo" src="./components/Media/MOTORA.png" alt="logo">
+  </div>
+    <nav>
+      <ul class="nav__links">
+        <a class="navlinks" routerLink="/home" [routerLinkActive]="['active-link']"> 
+         <li><a>Home</a></li>
+        <a class="navlinks" routerLink="/About" [routerLinkActive]="['active-link']"></a>
+          <li><a>About</a></li>
+        <a class="navlinks" routerLink="/About" [routerLinkActive]="['active-link']"></a>
+          <li><a>Products</a></li>
+         <a class="navlinks" routerLink="/About" [routerLinkActive]="['active-link']"></a>
+           <li><a>Services</a></li>
+    </a>
+    </ul>
+  </nav>
+  </header>
+
+
+
+
+
+
+
 
 <router-outlet></router-outlet>
