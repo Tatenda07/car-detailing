@@ -1,0 +1,152 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 15%;
+    height: 15%;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+li, a, button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+
+header { 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 10%;
+    box-sizing: border-box;
+    background-color: grey
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 20px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3 ease 0s;
+}
+
+.nav__links li a:hover {
+    color: red;
+}
+
+.cta button {
+    margin-left: 20px;
+    padding: 9px 20px;
+    background-color: rgba(139,0,0);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+
+button:hover{
+    background-color: rgba(255,0,0);
+
+}
+
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+    padding: 100px;
+    margin-left: 25px;
+}
+
+main{
+    background-image: url(/car-detailing/Frontend/src/app/components/media/pic-7.png);
+    background-size: 100%;
+}
+
+.col {
+    flex-basis: 50%;
+}
+
+h1{
+    font-size: 50px;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p{
+    color:whitesmoke;
+    font-size: 20px;
+    margin: 10px ;
+    margin-top: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.col button{
+    width: 180px;
+    color: black;
+    font-size: 12px 0;
+    padding: 12px 0;
+    background: white;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+    
+}
+
+.col button:hover{
+    background-color: rgba(255,0,0);
+}
+
+.card{
+    width: 500px;
+    height: 300px;
+    display: inline-block;
+    font-size: 30px;
+    color: red;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url(/car-detailing/Frontend/src/app/components/pic-1.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5;
+
+}
+
+.card1 {
+    background-image: url(/car-detailing/Frontend/src/app/components/Media/pic-1.jpg);
+}
+
+.card2 {
+    background-image: url(/car-detailing/Frontend/src/app/components/Media/pic-2.jpg);
+}
+
+.card3 {
+    background-image: url(/car-detailing/Frontend/src/app/components/Media/pic-5.jpg);
+}
+
+.card4 {
+    background-image: url(/car-detailing/Frontend/src/app/components/Media/pic-4.jpg);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.column-two h1{
+    text-align: right;
+    color: black;
+    padding: 10px;
+}
