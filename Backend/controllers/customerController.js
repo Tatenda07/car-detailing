@@ -71,7 +71,7 @@ router.patch('/:id', (req, res, next) => {
 });
 
 //delete customer 
-router.delete('/id:id', (req, res) => {
+router.delete('/:id', (req, res) => {
     //check is customer exists
     Customer.exists({ _id: req.params.id}).then((result) => {
         if(!result){
