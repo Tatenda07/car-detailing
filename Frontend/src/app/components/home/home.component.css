@@ -1,9 +1,5 @@
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+
 body {
     color: aqua;
 }
@@ -57,7 +53,7 @@ p{
 
 .col button{
     width: 180px;
-    color: black;
+    color: whitesmoke;
     font-size: 12px 0;
     padding: 12px 0;
     background: rgb(189, 17, 17);
@@ -115,4 +111,48 @@ p{
     text-align: right;
     color: black;
     padding: 10px;
+}
+
+.column-two p{
+    text-align: right;
+    color: black;
+    padding: 10px;
+    font-size: 25px;
+    border: 1000px;
+}
+
+
+.col-two{
+    max-width: 100%;
+    margin: 0 auto;
+    
+}
+
+.logo-col{
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 5%;
+}
+
+.logo1{
+    width: 20%;
+    padding: 50px;
+}
+
+.logo2{
+    padding: 50px;
+}
+
+.logo3{
+    margin-bottom: 100px;
+    width: 30%;
+    padding: 50px;
+}
+
+.logo4{
+    width: 15%;
+    padding: 50px;
+    margin-left: 100px;
+    margin-bottom: 50px;
 }
