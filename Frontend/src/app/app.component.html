@@ -1,9 +1,11 @@
 
- <header>
-   <div id= "image-container" class="nav-item">
+<header>
+  <nav>
+
+   <!--div id= "image-container" class="nav-item"-->
   <img class="logo" src="../assets/MOTORA.png" alt="logo">
-  </div>
-    <nav>
+  
+    
       <ul id="navlink-container" class="nav-item">
         <a class="navlinks" routerLink="/home" [routerLinkActive]="['active-link']">
           <li>HOME</li>
@@ -18,7 +20,7 @@
           <li>SERVICES</li>
         </a>
 
-     
+
 </ul>
 </nav>
 </header>
@@ -27,5 +29,5 @@
 
 
 
-
+<app-home></app-home>
 <router-outlet></router-outlet>
