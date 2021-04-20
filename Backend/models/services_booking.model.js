@@ -14,3 +14,5 @@ var services_bookingSchema = new mongoose.Schema({
     collection: 'services_booking'
 
 });
+
+module.exports = mongoose.model('Services_booking', services_bookingSchema);
