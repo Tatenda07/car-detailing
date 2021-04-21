@@ -7,5 +7,9 @@ var service_type_bookedSchema = new mongoose.Schema({
     service: [
         {type: mongoose.Schema.types.service.ObjectId, ref:'service'}
     ],
-    
-})
+
+}, {
+    collection: 'service_type_booked'
+});
+
+module.exports = mongoose.model('Service_type_booked', service_type_bookedSchema);

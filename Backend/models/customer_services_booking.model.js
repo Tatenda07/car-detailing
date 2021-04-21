@@ -11,3 +11,5 @@ var customer_services_bookingSchema = new mongoose.Schema({
     collection: 'customer_services_booking'
     
 });
+
+module.exports = mongoose.mocel('Customer_services_booking', customer_services_bookingSchema);
