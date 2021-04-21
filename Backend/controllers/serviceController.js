@@ -73,7 +73,7 @@ router.patch('/:id', (req, res, next) => {
 
 });
 
-//delete servicce
+//delete service
 router.delete('/:id', (req, res) => {
     //check if service exists
     Service.exists({ _id: req.params.id }).then((result) => {
