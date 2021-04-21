@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const _ = require('lodash');
 const { route } = require('./services_bookingController');
-require('../models/service.model')
+require('../models/customer_services_booking.model')
 
 const Customer_services_booking = mongoose.model('Customer_services_booking');
 
