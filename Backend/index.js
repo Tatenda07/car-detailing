@@ -1,7 +1,7 @@
 const express = require('express');
 const passport = require('passport');
 const _port = process.env.PORT || 3000;
-//const cors = require('cors');
+const cors = require('cors');
 require('./config/config');
 require('./db');
 require('./config/passportConfig');
@@ -9,7 +9,7 @@ require('./config/passportConfig');
 
 
 const app = express();
-//app.use(cors());
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

@@ -5,7 +5,8 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent} from './components/contact/contact.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ProductsComponent} from './components/products/products.component';
-import { AccountComponent } from './components/account/account.component'
+import { AccountComponent } from './components/account/account.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 
 
 
@@ -17,6 +18,7 @@ const routes: Routes = [
 { path: 'services', component: ServicesComponent},
 { path: 'products', component: ProductsComponent},
 { path: 'account', component: AccountComponent},
+{ path: 'adminDashboard', component: AdminDashboardComponent},
 { path: '', redirectTo: '/home', pathMatch: 'full'}
 
 ];
@@ -25,4 +27,12 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent, AboutComponent, ContactComponent, ServicesComponent, ProductsComponent, AccountComponent]
+export const routingComponents = [
+  HomeComponent,
+  AboutComponent,
+  ContactComponent,
+  ServicesComponent,
+  ProductsComponent,
+  AccountComponent,
+  AdminDashboardComponent,
+]
