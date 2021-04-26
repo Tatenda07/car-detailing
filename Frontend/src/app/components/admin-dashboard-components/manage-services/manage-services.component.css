@@ -113,12 +113,6 @@ left:7%;
   display: inline-block;
 }
 
-#users,
-#services,
-#customers {
-  display: none;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;

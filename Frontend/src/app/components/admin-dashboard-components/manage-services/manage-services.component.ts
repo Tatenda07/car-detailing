@@ -5,58 +5,26 @@ import { Services } from 'src/app/shared/services.model';
 import { ServicesService } from 'src/app/shared/services.service';
 
 @Component({
-  selector: 'app-admin-dashboard',
-  templateUrl: './admin-dashboard.component.html',
-  styleUrls: ['./admin-dashboard.component.css'],
+  selector: 'app-manage-services',
+  templateUrl: './manage-services.component.html',
+  styleUrls: ['./manage-services.component.css'],
   providers: [ServicesService]
 })
-export class AdminDashboardComponent implements OnInit {
-  showFistDiv = true;
+export class ManageServicesComponent implements OnInit {
   showHideServicesForm = false;
   services;
-
   constructor(
     public servicesService: ServicesService,
     private router: Router
   ) { }
 
   ngOnInit(): void {
-    let serviceDiv = document.getElementById('services');
-    serviceDiv.style.display = 'flex';
     this.resetServicesForm();
     this.refreshServicesList();
   }
 
-
   toggleDisplayDivIf() {
     this.showHideServicesForm = !this.showHideServicesForm;
-  }
-
-  /* USER CONTROLLERS */
-  showUsersDiv() {
-    let usersDiv = document.getElementById('users');
-    let customerDiv = document.getElementById('customers');
-    let serviceDiv = document.getElementById('services');
-
-    if (usersDiv.style.display = 'none' ) {
-      customerDiv.style.display = 'none';
-      usersDiv.style.display = 'flex';
-      serviceDiv.style.display = 'none';
-    }
-  }
-
-  /* SERVICES CONTROLLERS */
-  //show sevices div only
-  showServicesDiv() {
-    let usersDiv = document.getElementById('users');
-    let customerDiv = document.getElementById('customers');
-    let serviceDiv = document.getElementById('services');
-
-    if (serviceDiv.style.display = 'none' ) {
-      customerDiv.style.display = 'none';
-      usersDiv.style.display = 'none';
-      serviceDiv.style.display = 'flex';
-    }
   }
 
   //retrieve all services from the database
@@ -77,6 +45,7 @@ export class AdminDashboardComponent implements OnInit {
         serviceDescription: "",
       }
       this.showHideServicesForm = true;
+      this.refreshServicesList();
     }
 
     onSubmitService(form : NgForm) {
@@ -118,19 +87,6 @@ export class AdminDashboardComponent implements OnInit {
         this.refreshServicesList();
         alert('Service Deleted successfully');
       });
-    }
-  }
-
-  /* CUSTOMER CONTROLLERS */
-  showCustomersDiv() {
-    let usersDiv = document.getElementById('users');
-    let customerDiv = document.getElementById('customers');
-    let serviceDiv = document.getElementById('services');
-
-    if (customerDiv.style.display = 'none' ) {
-      customerDiv.style.display = 'flex';
-      usersDiv.style.display = 'none';
-      serviceDiv.style.display = 'none';
     }
   }
 

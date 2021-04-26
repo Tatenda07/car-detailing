@@ -6,7 +6,9 @@ import { ContactComponent} from './components/contact/contact.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ProductsComponent} from './components/products/products.component';
 import { AccountComponent } from './components/account/account.component';
-import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { ManageServicesComponent } from './components/admin-dashboard-components/manage-services/manage-services.component';
+import { ManageCustomersComponent } from './components/admin-dashboard-components/manage-customers/manage-customers.component';
+import { ManageUsersComponent } from './components/admin-dashboard-components/manage-users/manage-users.component';
 
 
 
@@ -18,7 +20,9 @@ const routes: Routes = [
 { path: 'services', component: ServicesComponent},
 { path: 'products', component: ProductsComponent},
 { path: 'account', component: AccountComponent},
-{ path: 'adminDashboard', component: AdminDashboardComponent},
+{ path: 'manageServices', component: ManageServicesComponent},
+{ path: 'manageCustomers', component: ManageCustomersComponent},
+{ path: 'manageUsers', component: ManageUsersComponent},
 { path: '', redirectTo: '/home', pathMatch: 'full'}
 
 ];
@@ -34,5 +38,7 @@ export const routingComponents = [
   ServicesComponent,
   ProductsComponent,
   AccountComponent,
-  AdminDashboardComponent,
+  ManageServicesComponent,
+  ManageCustomersComponent,
+  ManageUsersComponent
 ]
