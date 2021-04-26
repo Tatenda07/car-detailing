@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/shared/user.service';
 
 @Component({
   selector: 'app-manage-users',
@@ -6,12 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./manage-users.component.css']
 })
 export class ManageUsersComponent implements OnInit {
-  showHideUsersForm = false
+  showHideUsersForm = false;
+  userDetails;
 
-  constructor() { }
+  constructor(
+    private userService: UserService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.showHideUsersForm = true
+    this.userService.getUserProfile().subscribe(
+      res => {
+        this.userDetails = res['user'];
+      }
+    );
   }
 
   toggleDisplayDivIf() {
@@ -30,6 +41,12 @@ export class ManageUsersComponent implements OnInit {
     //resetCustomersForm code here
 
     this.showHideUsersForm = true;
+  }
+
+  //user logout
+  onLogout() {
+    this.userService.deleteToken();
+    this.router.navigate(['/home']);
   }
 
 }

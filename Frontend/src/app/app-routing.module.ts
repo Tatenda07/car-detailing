@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent} from './components/contact/contact.component';
@@ -10,6 +11,9 @@ import { ManageServicesComponent } from './components/admin-dashboard-components
 import { ManageCustomersComponent } from './components/admin-dashboard-components/manage-customers/manage-customers.component';
 import { ManageUsersComponent } from './components/admin-dashboard-components/manage-users/manage-users.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { LoginComponent } from './components/login/login.component';
+
+import { AuthGuard } from './auth/auth.guard';
 
 
 
@@ -21,10 +25,11 @@ const routes: Routes = [
 { path: 'services', component: ServicesComponent},
 { path: 'products', component: ProductsComponent},
 { path: 'account', component: AccountComponent},
-{ path: 'manageServices', component: ManageServicesComponent},
-{ path: 'manageCustomers', component: ManageCustomersComponent},
-{ path: 'manageUsers', component: ManageUsersComponent},
+{ path: 'manageServices', component: ManageServicesComponent, canActivate: [AuthGuard]},
+{ path: 'manageCustomers', component: ManageCustomersComponent, canActivate: [AuthGuard]},
+{ path: 'manageUsers', component: ManageUsersComponent, canActivate: [AuthGuard]},
 { path: 'sign-up', component: SignUpComponent},
+{ path: 'login', component: LoginComponent},
 { path: '', redirectTo: '/home', pathMatch: 'full'}
 
 ];
@@ -43,5 +48,6 @@ export const routingComponents = [
   ManageServicesComponent,
   ManageCustomersComponent,
   ManageUsersComponent,
-  SignUpComponent
+  SignUpComponent,
+  LoginComponent
 ]
