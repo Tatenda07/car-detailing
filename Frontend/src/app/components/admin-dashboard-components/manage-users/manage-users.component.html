@@ -8,28 +8,24 @@
             <li><a routerLink="/manageServices">Manage Services</a></li>
             <li><a routerLink="/manageCustomers">Manage Customers</a></li>
             <li><a routerLink="/manageUsers">Manage Users</a></li>
-            <li><a class="logout" style="color: red; cursor: pointer" routerLink="/home">Logout</a></li>
+            <li><a class="logout" style="color: red; cursor: pointer" (click) = 'onLogout()'>Logout</a></li>
         </ul>
     </div>
 
     <!-- Admin content -->
     <div class="admin-content">
       <div class="content">
-        <!-- <div *ngIf="userDetails">
+        <div *ngIf="userDetails">
           <h3>Hello, {{userDetails.fname}} </h3>
           <p style="font-style: italic;"><b>Username:</b> {{userDetails.username}}
           <b> Role:</b> {{userDetails.role}}
           <b> Email:</b> {{userDetails.email}}</p>
           <h5>Admin Dashboard: Manage Users</h5>
-        </div> -->
+        </div>
 
       </div>
 
       <div id="users-wrapper">
-        <div>
-          <h5>Admin Dashboard: Manage Users</h5>
-        </div>
-
         <div id="users" style="display: flex;">
           <div class="col s5" style="flex: 2; border-right: cadetblue 1px solid;" *ngIf="!showHideUsersForm">
             <div>

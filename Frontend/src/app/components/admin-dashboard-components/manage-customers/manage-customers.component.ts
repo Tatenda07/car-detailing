@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/shared/user.service';
 
 @Component({
   selector: 'app-manage-customers',
@@ -7,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManageCustomersComponent implements OnInit {
   showHideCustomersForm = false;
+  userDetails;
 
-  constructor() { }
+  constructor(
+    private userService: UserService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.userService.getUserProfile().subscribe(
+      res => {
+        this.userDetails = res['user'];
+      }
+    );
+
     this.showHideCustomersForm = true;
   }
 
@@ -32,6 +44,10 @@ export class ManageCustomersComponent implements OnInit {
     this.showHideCustomersForm = true;
   }
 
+  onLogout() {
+    this.userService.deleteToken();
+    this.router.navigate(['/home']);
+  }
 
 
 }

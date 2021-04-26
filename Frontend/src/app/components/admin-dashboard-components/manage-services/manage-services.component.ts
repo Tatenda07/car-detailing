@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Services } from 'src/app/shared/services.model';
 import { ServicesService } from 'src/app/shared/services.service';
+import { UserService } from 'src/app/shared/user.service';
 
 @Component({
   selector: 'app-manage-services',
@@ -13,12 +14,20 @@ import { ServicesService } from 'src/app/shared/services.service';
 export class ManageServicesComponent implements OnInit {
   showHideServicesForm = false;
   services;
+  userDetails;
   constructor(
     public servicesService: ServicesService,
+    private userService: UserService,
     private router: Router
   ) { }
 
   ngOnInit(): void {
+    this.userService.getUserProfile().subscribe(
+      res => {
+        this.userDetails = res['user'];
+      }
+    );
+
     this.resetServicesForm();
     this.refreshServicesList();
   }
@@ -88,6 +97,11 @@ export class ManageServicesComponent implements OnInit {
         alert('Service Deleted successfully');
       });
     }
+  }
+
+  onLogout() {
+    this.userService.deleteToken();
+    this.router.navigate(['/home']);
   }
 
 }
