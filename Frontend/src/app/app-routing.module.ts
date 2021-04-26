@@ -9,6 +9,7 @@ import { AccountComponent } from './components/account/account.component';
 import { ManageServicesComponent } from './components/admin-dashboard-components/manage-services/manage-services.component';
 import { ManageCustomersComponent } from './components/admin-dashboard-components/manage-customers/manage-customers.component';
 import { ManageUsersComponent } from './components/admin-dashboard-components/manage-users/manage-users.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
 
@@ -23,6 +24,7 @@ const routes: Routes = [
 { path: 'manageServices', component: ManageServicesComponent},
 { path: 'manageCustomers', component: ManageCustomersComponent},
 { path: 'manageUsers', component: ManageUsersComponent},
+{ path: 'sign-up', component: SignUpComponent},
 { path: '', redirectTo: '/home', pathMatch: 'full'}
 
 ];
@@ -40,5 +42,6 @@ export const routingComponents = [
   AccountComponent,
   ManageServicesComponent,
   ManageCustomersComponent,
-  ManageUsersComponent
+  ManageUsersComponent,
+  SignUpComponent
 ]

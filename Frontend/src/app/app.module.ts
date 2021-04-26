@@ -6,6 +6,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -14,6 +15,7 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent,
     routingComponents,
+    LoginComponent,
 
   ],
   imports: [

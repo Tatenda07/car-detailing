@@ -35,7 +35,8 @@ var userSchema = new mongoose.Schema({
     },
     role: {
          type: String 
-    }
+    },
+    saltSecret: String
 }, {
     collection: 'users'
 });
