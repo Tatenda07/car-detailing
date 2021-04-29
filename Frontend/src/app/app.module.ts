@@ -8,6 +8,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptor';
+import { TeamComponent } from './components/team/team.component';
 
 
 
@@ -15,7 +16,8 @@ import { AuthInterceptor } from './auth/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
+    TeamComponent
 
   ],
   imports: [

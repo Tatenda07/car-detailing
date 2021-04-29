@@ -278,14 +278,28 @@
   
     color: rgb(172, 11, 11);
 
-
-
-
 }
 #index-gallery{
     width:100%;
 }
-    
+li {
+   
+    text-align: center;
+    width: 20%;
+    color:rgb(255, 255, 255);
+    margin: 2% 40% 0 40%;
+    padding: 15px 15px 15px 15px;
+    background-color: rgb(104, 0, 0);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    list-style: none;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
 
 @media screen and (max-width: 1550px) {
     .footer {

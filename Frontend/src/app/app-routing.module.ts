@@ -13,7 +13,9 @@ import { ManageUsersComponent } from './components/admin-dashboard-components/ma
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
 
+
 import { AuthGuard } from './auth/auth.guard';
+import { TeamComponent } from './components/team/team.component';
 
 
 
@@ -30,7 +32,8 @@ const routes: Routes = [
 { path: 'manageUsers', component: ManageUsersComponent, canActivate: [AuthGuard]},
 { path: 'sign-up', component: SignUpComponent},
 { path: 'login', component: LoginComponent},
-{ path: '', redirectTo: '/home', pathMatch: 'full'}
+{ path: '', redirectTo: '/home', pathMatch: 'full'},
+{ path: 'team', component: TeamComponent}
 
 ];
 @NgModule({
