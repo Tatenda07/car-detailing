@@ -4,6 +4,7 @@
     text-align: center;
     margin-top: 250px;
     font-size: 75px;
+    
 
 }
 
@@ -143,15 +144,18 @@
 }
 
 .third-content .third-content-para{
+    padding-right: 30px;
     margin-top: 50px;
     font-family:  'Montserrat', sans-serif;
+    font-size: 13px;
+    text-align: justify;
 
 }
 
 .footer-container {
+
     background-color: lightgray;
-    padding-bottom: 4rem 0 2rem 0;
-    padding-top: 20px;
+    padding-top: 80px;
 }
 
 .footer {
@@ -251,6 +255,7 @@
     font-family: 'Montserrat', sans-serif;
     color: red ;
     padding: 10px;
+    font-weight: 30;
 }
 
 .item img {

@@ -41,13 +41,13 @@ a:hover{
 }
 
 .gray {
-  color: #a5a5a5;
+  color: #706c6c;
 }
 
 .team{
   margin:40px;
-}
 
+}
 .team-member {
   margin: 15px 0;
   padding: 0;
@@ -60,8 +60,10 @@ a:hover{
   margin: 0;
 }
 
+    
 .team-member figure img {
   min-width: 100%;
+  position: relative;
 }
 
 .team-member figcaption p {
