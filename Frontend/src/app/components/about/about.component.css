@@ -255,13 +255,13 @@
 
 .item img {
   
-    margin-left: 80px;
-    height: 200px;
-    width: 200px;
-    padding: 0;
+    margin-left: 50px;
+    height: 250px;
+    width: 250px;
+    padding: 20px;
     border-radius: 50%;
 }
-.item{
+.member-card {
     width:200px;
     padding-left: 150px;
     display: inline-block;
@@ -270,12 +270,12 @@
     margin-right: 20px;
     margin-bottom: 1px;
 }
-.item p {
-    white-space:pre;
-    font-size: 18px;
-    padding-left: 100px;
-    letter-spacing: 1px;
-  
+.member-card h1 {
+    text-align: center;
+    padding: 5px;
+    white-space: pre;
+    font-size: 15px;
+    padding-left: 105px;
     color: rgb(172, 11, 11);
 
 }
