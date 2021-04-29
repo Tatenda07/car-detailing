@@ -145,7 +145,7 @@
 .third-content .third-content-para{
     margin-top: 50px;
     font-family:  'Montserrat', sans-serif;
-    
+
 }
 
 .footer-container {
@@ -234,6 +234,58 @@
     background-color: #337AF1;
     transition: all 0.4s ease-out;
 }
+
+.team h2 {
+
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 9px;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: red ;
+}
+.team h3 {
+    font-size: 60px;
+    letter-spacing: 8px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: red ;
+    padding: 10px;
+}
+
+.item img {
+  
+    margin-left: 80px;
+    height: 200px;
+    width: 200px;
+    padding: 0;
+    border-radius: 50%;
+}
+.item{
+    width:200px;
+    padding-left: 150px;
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-right: 20px;
+    margin-bottom: 1px;
+}
+.item p {
+    white-space:pre;
+    font-size: 18px;
+    padding-left: 100px;
+    letter-spacing: 1px;
+  
+    color: rgb(172, 11, 11);
+
+
+
+
+}
+#index-gallery{
+    width:100%;
+}
+    
 
 @media screen and (max-width: 1550px) {
     .footer {
