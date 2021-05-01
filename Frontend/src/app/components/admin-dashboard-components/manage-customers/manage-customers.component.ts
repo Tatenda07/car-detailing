@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CustomersService } from 'src/app/shared/customers.service';
 import { UserService } from 'src/app/shared/user.service';
+
 
 @Component({
   selector: 'app-manage-customers',
@@ -13,7 +15,8 @@ export class ManageCustomersComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    public customerService: CustomersService
   ) { }
 
   ngOnInit(): void {
