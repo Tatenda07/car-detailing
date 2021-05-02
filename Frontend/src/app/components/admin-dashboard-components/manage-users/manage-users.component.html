@@ -29,8 +29,8 @@
         <div id="users" style="display: flex;">
           <div class="col s5" style="flex: 2; border-right: cadetblue 1px solid;" *ngIf="!showHideUsersForm">
             <div>
-              <form #userForm="ngForm" ()>
-              <input type="hidden">
+              <form #userForm="ngForm" (ngSubmit)="onSubmitUser(userForm)" autocomplete="off">
+              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="usersService.selectedUser._id">
                     <p style="text-align: center; color:  cadetblue;">Edit or Update User Info</p>
                     <input type="hidden" name="_id" >
                     <div class="row">
@@ -101,11 +101,11 @@
                 <td>
                   <!-- edit button -->
                   <a class="action-btn edit" title="Edit or update Customer">
-                    <i class="material-icons" (click) = "onEditUser()">edit</i>
+                    <i class="material-icons" (click) = "onEditUser(users)">edit</i>
                   </a>
                   <!-- delete button -->
-                  <a class="action-btn delete" title="Delete Customer">
-                    <i class="material-icons">delete</i>
+                  <a class="action-btn delete" title="Delete User">
+                    <i class="material-icons" (click)= "onDeleteUser(users._id)">delete</i>
                   </a>
                 </td>
               </tr>
