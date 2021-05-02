@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from 'src/app/shared/user.model'
 import { UserService } from 'src/app/shared/user.service';
 
 @Component({
@@ -12,7 +13,7 @@ import { UserService } from 'src/app/shared/user.service';
 
 export class ManageUsersComponent implements OnInit {
   showHideUsersForm = false;
-  users;
+  user;
   userDetails;
 
   constructor(
@@ -39,19 +40,22 @@ export class ManageUsersComponent implements OnInit {
 
   ShowUsers() {
     this.usersService.getUsers()
-    .subscribe((data: any) => this.users = data
+    .subscribe((data: any) => this.user = data
     );
-    console.log(this.users);
+    console.log(this.user);
   }
 
   //edit or update customer info
-  onEditUser() {
-    //edit customer code here
-
+  onEditUser(service : User) {
+    this.usersService.selectedUser = service;
     this.showHideUsersForm = false;
   }
 
-  refreshUsersList(){
+  //refresh Customers list
+  refreshUsersList() {
+    this.usersService.getUsers().subscribe((res) => {
+      this.usersService.usersList = res as User[];
+    });
 
   }
 
@@ -59,7 +63,7 @@ export class ManageUsersComponent implements OnInit {
   resetUsersForm(form ?: NgForm) {
     if (form)
       form.reset();
-    this.usersService.selectedUser ={
+    this.userService.selectedUser ={
       _id: "",
       fname: "",
       lname: "",
@@ -75,15 +79,31 @@ export class ManageUsersComponent implements OnInit {
     this.showHideUsersForm = true;
   }
 
-  onSubmitUser(){
+  onSubmitUser(form : NgForm) {
+    //add new user
+    if(form.value._id == "") {
+      this.usersService.postUser(form.value).subscribe((res) => {
+        this.resetUsersForm(form);
+        this.refreshUsersList();
+        alert('New User added Successfully!');
+      });
 
-  }
+    //update existing user
+    } else {
+      this.usersService.editUser(form.value).subscribe((res) => {
+        this.resetUsersForm(form);
+        this.refreshUsersList();
+        alert('User Information Updated Successfully');
+      });
+    }
+    }
 
   onDeleteUser(_id: string){
     if(this.userDetails('Are you sure you want to delete this User?') == true) {
-      this.usersService.deleteUser(_id).subscribe((res) => {
+      this.userService.deleteUser(_id).subscribe((res) => {
         this.refreshUsersList();
-      })
+        alert('User eleted Successfully')
+      });
     }
 
   }
