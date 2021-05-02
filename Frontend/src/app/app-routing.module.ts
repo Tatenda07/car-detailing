@@ -5,13 +5,13 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent} from './components/contact/contact.component';
 import { ServicesComponent } from './components/services/services.component';
-import { ProductsComponent} from './components/products/products.component';
 import { AccountComponent } from './components/account/account.component';
 import { ManageServicesComponent } from './components/admin-dashboard-components/manage-services/manage-services.component';
 import { ManageCustomersComponent } from './components/admin-dashboard-components/manage-customers/manage-customers.component';
 import { ManageUsersComponent } from './components/admin-dashboard-components/manage-users/manage-users.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
+import { CarwashComponent } from './components/services/carwash/carwash.component';
 
 
 import { AuthGuard } from './auth/auth.guard';
@@ -25,7 +25,6 @@ const routes: Routes = [
 { path: 'about', component: AboutComponent},
 { path: 'contact', component: ContactComponent},
 { path: 'services', component: ServicesComponent},
-{ path: 'products', component: ProductsComponent},
 { path: 'account', component: AccountComponent},
 { path: 'manageServices', component: ManageServicesComponent, canActivate: [AuthGuard]},
 { path: 'manageCustomers', component: ManageCustomersComponent, canActivate: [AuthGuard]},
@@ -33,7 +32,8 @@ const routes: Routes = [
 { path: 'sign-up', component: SignUpComponent},
 { path: 'login', component: LoginComponent},
 { path: '', redirectTo: '/home', pathMatch: 'full'},
-{ path: 'team', component: TeamComponent}
+{ path: 'team', component: TeamComponent},
+{ path: 'carwash', component:CarwashComponent}
 
 ];
 @NgModule({
@@ -46,7 +46,6 @@ export const routingComponents = [
   AboutComponent,
   ContactComponent,
   ServicesComponent,
-  ProductsComponent,
   AccountComponent,
   ManageServicesComponent,
   ManageCustomersComponent,
