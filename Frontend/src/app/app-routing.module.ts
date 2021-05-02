@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
@@ -16,6 +16,9 @@ import { CarwashComponent } from './components/services/carwash/carwash.componen
 
 import { AuthGuard } from './auth/auth.guard';
 import { TeamComponent } from './components/team/team.component';
+import { GlassCoatingComponent } from './components/services/glass-coating/glass-coating.component';
+import { PaintJobComponent } from './components/services/paint-job/paint-job.component';
+import { TintServicesComponent } from './components/services/tint-services/tint-services.component';
 
 
 
@@ -33,7 +36,10 @@ const routes: Routes = [
 { path: 'login', component: LoginComponent},
 { path: '', redirectTo: '/home', pathMatch: 'full'},
 { path: 'team', component: TeamComponent},
-{ path: 'carwash', component:CarwashComponent}
+{ path: 'carwash', component: CarwashComponent},
+{ path: 'glasscoat', component: GlassCoatingComponent},
+{ path: 'paintjob', component:PaintJobComponent},
+{ path: 'tint', component: TintServicesComponent}
 
 ];
 @NgModule({
