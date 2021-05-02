@@ -23,6 +23,7 @@ export class ManageCustomersComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.showHideCustomersForm = true
     this.userService.getUserProfile().subscribe(
       res => {
         this.userDetails = res['user'];
