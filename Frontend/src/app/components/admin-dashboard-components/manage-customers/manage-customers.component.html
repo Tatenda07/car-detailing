@@ -87,11 +87,11 @@
                 <td>
                   <!-- edit button -->
                   <a class="action-btn edit" title="Edit or update Customer">
-                    <i class="material-icons" (click) = "onEditCustomer()">edit</i>
+                    <i class="material-icons" (click)="onEditCustomer(customers)">edit</i>
                   </a>
                   <!-- delete button -->
                   <a class="action-btn delete" title="Delete Customer">
-                    <i class="material-icons">delete</i>
+                    <i class="material-icons" (click)="onDeleteCustomer(customers._id)">delete</i>
                   </a>
                 </td>
               </tr>
