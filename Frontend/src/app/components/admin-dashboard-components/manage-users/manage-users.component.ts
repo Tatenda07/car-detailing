@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from 'src/app/shared/user.model'
+import { User } from 'src/app/shared/user.model';
 import { UserService } from 'src/app/shared/user.service';
 
 @Component({
@@ -17,9 +17,8 @@ export class ManageUsersComponent implements OnInit {
   userDetails;
 
   constructor(
-    private userService: UserService,
     private router: Router,
-    public usersService: UserService
+    public userService: UserService,
   ) { }
 
   ngOnInit(): void {
@@ -39,22 +38,22 @@ export class ManageUsersComponent implements OnInit {
   }
 
   ShowUsers() {
-    this.usersService.getUsers()
+    this.userService.getUsers()
     .subscribe((data: any) => this.user = data
     );
     console.log(this.user);
   }
 
   //edit or update customer info
-  onEditUser(service : User) {
-    this.usersService.selectedUser = service;
+  onEditUser(user : User) {
+    this.userService.selectedUser = user;
     this.showHideUsersForm = false;
   }
 
   //refresh Customers list
   refreshUsersList() {
-    this.usersService.getUsers().subscribe((res) => {
-      this.usersService.usersList = res as User[];
+    this.userService.getUsers().subscribe((res) => {
+      this.userService.usersList = res as User[];
     });
 
   }
@@ -82,7 +81,7 @@ export class ManageUsersComponent implements OnInit {
   onSubmitUser(form : NgForm) {
     //add new user
     if(form.value._id == "") {
-      this.usersService.postUser(form.value).subscribe((res) => {
+      this.userService.postUser(form.value).subscribe((res) => {
         this.resetUsersForm(form);
         this.refreshUsersList();
         alert('New User added Successfully!');
@@ -90,7 +89,7 @@ export class ManageUsersComponent implements OnInit {
 
     //update existing user
     } else {
-      this.usersService.editUser(form.value).subscribe((res) => {
+      this.userService.editUser(form.value).subscribe((res) => {
         this.resetUsersForm(form);
         this.refreshUsersList();
         alert('User Information Updated Successfully');

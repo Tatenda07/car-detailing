@@ -30,7 +30,7 @@
           <div class="col s5" style="flex: 2; border-right: cadetblue 1px solid;" *ngIf="!showHideUsersForm">
             <div>
               <form #userForm="ngForm" (ngSubmit)="onSubmitUser(userForm)" autocomplete="off">
-              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="usersService.selectedUser._id">
+              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="userService.selectedUser._id">
                     <p style="text-align: center; color:  cadetblue;">Edit or Update User Info</p>
                     <input type="hidden" name="_id" >
                     <div class="row">
@@ -91,17 +91,17 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td></td>  <!-- first name and last name in the same table data, sample <td>{{ first name }} {{ last name }}</td> -->
-                <td></td> <!-- username here -->
-                <td></td> <!-- email here -->
-                <td></td> <!-- address here -->
-                <td></td> <!-- phone number here -->
-                <td></td> <!-- role here -->
+              <tr *ngFor="let user of userService.usersList">
+                <td>{{ user.fname }} {{ user.lname }}</td> 
+                <td>{{ user.username }}</td> 
+                <td>{{ user.email }}</td> 
+                <td>{{ user.address }}</td> 
+                <td>{{ user.phoneNumber }}</td> 
+                <td>{{ user.role }}</td> 
                 <td>
                   <!-- edit button -->
-                  <a class="action-btn edit" title="Edit or update Customer">
-                    <i class="material-icons" (click) ="onEditUser(user)">edit</i>
+                  <a class="action-btn edit" title="Edit or update User">
+                    <i class="material-icons" (click)="onEditUser(user)">edit</i>
                   </a>
                   <!-- delete button -->
                   <a class="action-btn delete" title="Delete User">
