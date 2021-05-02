@@ -39,10 +39,30 @@ export class ManageUsersComponent implements OnInit {
 
   ShowUsers() {
     this.userService.getUsers()
-    .subscribe((data: any) => this.user = data
-    );
+      .subscribe((data: any) => this.user = data
+      );
     console.log(this.user);
   }
+
+    //reset edit service form (this is the method for the cancel button on the form)
+    resetUsersForm(form ?: NgForm) {
+      if (form)
+        form.reset();
+      this.userService.selectedUser ={
+        _id: "",
+        fname: "",
+        lname: "",
+        username: "",
+        email: "",
+        address: "",
+        phoneNumber: "",
+        password: "",
+        role: "",
+      }
+
+      this.showHideUsersForm = true;
+      this.refreshUsersList();
+    }
 
   //edit or update customer info
   onEditUser(user : User) {
@@ -58,29 +78,11 @@ export class ManageUsersComponent implements OnInit {
 
   }
 
-  //reset edit service form (this is the method for the cancel button on the form)
-  resetUsersForm(form ?: NgForm) {
-    if (form)
-      form.reset();
-    this.userService.selectedUser ={
-      _id: "",
-      fname: "",
-      lname: "",
-      username: "",
-      email: "",
-      address: "",
-      phoneNumber: "",
-      password: "",
-      role: "",
-    }
-
-
-    this.showHideUsersForm = true;
-  }
+  
 
   onSubmitUser(form : NgForm) {
     //add new user
-    if(form.value._id == "") {
+    if (form.value._id == "") {
       this.userService.postUser(form.value).subscribe((res) => {
         this.resetUsersForm(form);
         this.refreshUsersList();
@@ -95,16 +97,15 @@ export class ManageUsersComponent implements OnInit {
         alert('User Information Updated Successfully');
       });
     }
-    }
+  }
 
   onDeleteUser(_id: string){
-    if(this.userDetails('Are you sure you want to delete this User?') == true) {
+    if(confirm('Are you sure you want to delete this User?') == true) {
       this.userService.deleteUser(_id).subscribe((res) => {
         this.refreshUsersList();
-        alert('User eleted Successfully')
+        alert('User eleted Successfully');
       });
     }
-
   }
 
   //user logout
