@@ -22,15 +22,15 @@
           <b> Email:</b> {{userDetails.email}}</p>
           <h5>Admin Dashboard: Manage Customers</h5>
         </div>
-
+        <button (click)=toggleDisplayDivIf() >Add a new Customer</button>
       </div>
 
       <div id="services-wrapper">
         <div id="customers" style="display: flex;">
           <div class="col s5" style="flex: 2; border-right: cadetblue 1px solid;" *ngIf="!showHideCustomersForm">
             <div>
-              <form #customerForm="ngForm">
-              <input type="hidden">
+              <form #customerForm="ngForm" (ngSubmit)="onSubmitCustomer(customerForm)" autocomplete="off">
+              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="customersService.selectedService._id">
                     <p style="text-align: center; color:  cadetblue;">Edit or Update Customer Info</p>
                     <input type="hidden" name="_id" >
                     <div class="row">
