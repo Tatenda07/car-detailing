@@ -22,14 +22,14 @@
           <b> Email:</b> {{userDetails.email}}</p>
           <h5>Admin Dashboard: Manage Users</h5>
         </div>
-
+        <button (click)=toggleDisplayDivIf()>Add a new User</button>
       </div>
 
       <div id="users-wrapper">
         <div id="users" style="display: flex;">
           <div class="col s5" style="flex: 2; border-right: cadetblue 1px solid;" *ngIf="!showHideUsersForm">
             <div>
-              <form #userForm="ngForm">
+              <form #userForm="ngForm" ()>
               <input type="hidden">
                     <p style="text-align: center; color:  cadetblue;">Edit or Update User Info</p>
                     <input type="hidden" name="_id" >
