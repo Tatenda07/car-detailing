@@ -1545,8 +1545,7 @@
     margin-top: 50px;
     filter: drop-shadow(0.7em .75em .5em);
     border-radius: 20px;
-    width: 100%;
-    height: 100%;
+    max-width: 1000px;
 }
 
 .third-content-section {
