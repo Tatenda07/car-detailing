@@ -9,6 +9,10 @@ import { AppComponent } from './app.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { TeamComponent } from './components/team/team.component';
+import { GlassCoatingComponent } from './components/services/glass-coating/glass-coating.component';
+import { PaintJobComponent } from './components/services/paint-job/paint-job.component';
+import { TintServicesComponent } from './components/services/tint-services/tint-services.component';
+import { CarwashComponent } from './components/services/carwash/carwash.component';
 
 
 
@@ -17,7 +21,12 @@ import { TeamComponent } from './components/team/team.component';
   declarations: [
     AppComponent,
     routingComponents,
-    TeamComponent
+    TeamComponent,
+    GlassCoatingComponent,
+    PaintJobComponent,
+    TintServicesComponent,
+    CarwashComponent,
+    
 
   ],
   imports: [
