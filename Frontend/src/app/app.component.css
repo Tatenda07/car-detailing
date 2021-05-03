@@ -29,7 +29,7 @@ img {
 }
 li {
     color:rgb(255, 255, 255);
-    margin: 10px;
+    margin: 20px 15px 0 0;
     padding: 15px 15px 15px 15px;
     background-color: rgb(104, 0, 0);
     border: none;
@@ -43,6 +43,9 @@ li {
 a {
     text-decoration: none;
 
+}
+a.hover {
+    list-style: none;
 }
 #navlink-container {
     display: flex;

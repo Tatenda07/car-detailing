@@ -335,9 +335,7 @@ hr.one{
     padding: 80px;
     background-image: url(../../../assets/pic-7.png);
     background-size: 100%;
-}
-.col {
-    flex-basis: initial;
+
 }
 }
 
