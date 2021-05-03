@@ -160,7 +160,6 @@ p{
 
 .middle-body-container{
     display: flex;
-<<<<<<< HEAD
     height: 800px;
     background: #19191d;
     word-wrap: break-word;
@@ -183,38 +182,6 @@ p{
     text-align: center;
 }
 
-=======
-    background-color: #19191d;
-    height: 950px;
-
- 
-}
-
-.container-content{
-    max-width: 700px;
-    padding: 50px;
-  
-}
-
-.second-container-content{
-    max-width: 700px;
-    padding: 50px;
-
-}
-
-.third-container-content{
-    max-width: 700px;
-    padding: 50px;
-    
-}
-
-.line-container{
-    background-color: #19191d;
-    height: 350px;
-    margin: 0%;
-    padding: 0%;
-}
->>>>>>> 15708c47c6e41512a70c1f1147b700fb95775a01
 
 hr.line-box{
     border: none;
@@ -245,26 +212,26 @@ hr.line-box{
 
 .img-products .img1{
     margin-top: 75px;
-    max-width: 200px;
-    max-height: 100px;
+    max-width: 500px;
+    max-height: 200px;
 }
 
 .img-products .img2{
     margin-top: 75px;
-    max-width: 250px;
-    max-height: 100px;
+    max-width: 500px;
+    max-height: 200px;
 }
 
 .img-products .img3{
     margin-top: 100px;
-    max-width: 300px;
-    max-height: 90px;
+    max-width: 700px;
+    max-height: 100px;
 }
 
 .img-products .img4{
 
-    max-width: 400px;
-    max-height: 200px;
+    max-width: 700px;
+    max-height: 300px;
 }
 
 .footer-container {
