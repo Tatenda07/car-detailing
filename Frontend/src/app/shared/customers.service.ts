@@ -8,8 +8,8 @@ import { Customers } from './customers.model'
 })
 
 export class CustomersService {
-  readonly baseURL = 'http://localhost:3000/servies';
-  selectedService: Customers ={
+  readonly baseURL = 'http://localhost:3000/customers';
+  selectedCustomer: Customers ={
     _id: '',
     firstName: '',
     lastName: '',
@@ -23,8 +23,8 @@ export class CustomersService {
   constructor(private https: HttpClient) { }
 
   //insert new customer into the database
-  postCustomer(service: Customers) {
-    return this.https.post(this.baseURL, service);
+  postCustomer(customer: Customers) {
+    return this.https.post(this.baseURL, customer);
   }
 
   //get all customers
@@ -38,7 +38,7 @@ export class CustomersService {
   }
 
   //edit customer in the database
-  editCustomer(service : Customers) {
-    return this.https.patch(this.baseURL + `/${service._id}`, service);
+  editCustomer(customer : Customers) {
+    return this.https.patch(this.baseURL + `/${customer._id}`, customer);
   }
 }
