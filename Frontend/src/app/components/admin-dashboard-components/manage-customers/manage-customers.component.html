@@ -30,7 +30,7 @@
           <div class="col s5" style="flex: 2; border-right: cadetblue 1px solid;" *ngIf="!showHideCustomersForm">
             <div>
               <form #customerForm="ngForm" (ngSubmit)="onSubmitCustomer(customerForm)" autocomplete="off">
-              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="customersService.selectedService._id">
+              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="customersService.selectedCustomer._id">
                     <p style="text-align: center; color:  cadetblue;">Edit or Update Customer Info</p>
                     <input type="hidden" name="_id" >
                     <div class="row">
@@ -38,28 +38,29 @@
                         <label class="green-text">First Name :
                           <label class="red-text">*</label>
                         </label>
-                        <input type="text" name="firstName" #firstName="ngModel" [(ngModel)]=" customersService.selectedService.firstName" placeholder="First Name" required>
+                        <input type="text" name="firstName" #firstName="ngModel" [(ngModel)]=" customersService.selectedCustomer.firstName" placeholder="First Name" required>
 
                         <label class="green-text">Last Name :
                           <label class="red-text">*</label>
                         </label>
-                        <input type="text" name="lastName" #lastName="ngModel" [(ngModel)]=" customersService.selectedService.lastName" placeholder="Last Name" required>
+                        <input type="text" name="lastName" #lastName="ngModel" [(ngModel)]=" customersService.selectedCustomer.lastName" placeholder="Last Name" required>
 
                         <label class="green-text">Email :
                           <label class="red-text">*</label>
                         </label>
-                        <input type="text" name="email" #email="ngModel" [(ngModel)]=" customersService.selectedService.email" placeholder="Email" readonly>
+                        <input type="text" name="email" #email="ngModel" [(ngModel)]=" customersService.selectedCustomer.email" placeholder="Email" readonly>
 
                         <label class="green-text">Physical Address :
                           <label class="red-text">*</label>
                         </label>
-                        <input type="text" name="address" #address="ngModel" [(ngModel)]=" customersService.selectedService.address" placeholder="Address" required>
+                        <input type="text" name="address" #address="ngModel" [(ngModel)]=" customersService.selectedCustomer.address" placeholder="Address" required>
 
                         <label class="green-text">Phone Number :
                           <label class="red-text">*</label>
                         </label>
-                        <input type="text"name="phoneNumber" #phoneNumber="ngModel" [(ngModel)]=" customersService.selectedService.phoneNumber" placeholder="Phone Number" required>
-                        <button class="btn btn-custom right" type="button" (click) ="resetCustomersForm()">Cancel</button>
+                        <input type="text" name="phoneNumber" #phoneNumber="ngModel" [(ngModel)]=" customersService.selectedCustomer.phoneNumber" placeholder="Phone Number" required>
+
+                        <button class="btn btn-custom right" type="button" (click)="resetCustomersForm()">Cancel</button>
                         <button class="btn btn-custom right" type="submit" [disabled]="!customerForm.valid">Update</button>
                       </div>
                     </div>
@@ -78,19 +79,19 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let customers of customersService.customersList">
-                <td>{{ customers.firstName }} {{ customers.lastName }}</td> 
-                <td>{{ customers.email }}</td> 
-                <td>{{ customers.address }}</td> 
-                <td>{{ customers.phoneNumber }}</td> 
+              <tr *ngFor="let customer of customersService.customersList">
+                <td>{{ customer.firstName }} {{ customer.lastName }}</td> 
+                <td>{{ customer.email }}</td> 
+                <td>{{ customer.address }}</td> 
+                <td>{{ customer.phoneNumber }}</td> 
                 <td>
                   <!-- edit button -->
                   <a class="action-btn edit" title="Edit or update Customer">
-                    <i class="material-icons" (click)="onEditCustomer(customers)">edit</i>
+                    <i class="material-icons" (click)="onEditCustomer(customer)">edit</i>
                   </a>
                   <!-- delete button -->
                   <a class="action-btn delete" title="Delete Customer">
-                    <i class="material-icons" (click)="onDeleteCustomer(customers._id)">delete</i>
+                    <i class="material-icons" (click)="onDeleteCustomer(customer._id)">delete</i>
                   </a>
                 </td>
               </tr>

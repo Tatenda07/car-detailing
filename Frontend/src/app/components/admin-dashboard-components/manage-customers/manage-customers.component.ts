@@ -13,7 +13,7 @@ import { UserService } from 'src/app/shared/user.service';
 })
 export class ManageCustomersComponent implements OnInit {
   showHideCustomersForm = false;
-  customers;
+  customer;
   userDetails;
 
   constructor(
@@ -23,6 +23,7 @@ export class ManageCustomersComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.showHideCustomersForm = true
     this.userService.getUserProfile().subscribe(
       res => {
         this.userDetails = res['user'];
@@ -40,14 +41,31 @@ export class ManageCustomersComponent implements OnInit {
 
   showCustomers() {
     this.customersService.getCustomer()
-    .subscribe((data: any) => this.customers = data
+    .subscribe((data: any) => this.customer = data
     );
-    console.log(this.customers);
+    console.log(this.customer);
   }
 
+    //reset edit service form (this is the method for the cancel button on the form)
+    resetCustomersForm(form ?: NgForm) {
+      if (form)
+        form.reset();
+      this.customersService.selectedCustomer = {
+        _id: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+        address: "",
+        phoneNumber: "",
+      }
+      this.showHideCustomersForm = true;
+      this.refreshCustomersList();
+
+    }
+
   //edit or update customer info
-  onEditCustomer(service : Customers) {
-    this.customersService.selectedService = service;
+  onEditCustomer(customer : Customers) {
+    this.customersService.selectedCustomer = customer;
     this.showHideCustomersForm = false;
   }
 
@@ -85,23 +103,6 @@ export class ManageCustomersComponent implements OnInit {
         alert('Customer Information Updated Successfully');
       });
     }
-  }
-
-  //reset edit service form (this is the method for the cancel button on the form)
-  resetCustomersForm(form ?: NgForm) {
-    if (form)
-      form.reset();
-    this.customersService.selectedService = {
-      _id: "",
-      firstName: "",
-      lastName: "",
-      email: "",
-      address: "",
-      phoneNumber: "",
-    }
-    this.showHideCustomersForm = true;
-    this.refreshCustomersList();
-
   }
 
   onLogout() {

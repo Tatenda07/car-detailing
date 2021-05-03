@@ -78,8 +78,6 @@ export class ManageUsersComponent implements OnInit {
 
   }
 
-  
-
   onSubmitUser(form : NgForm) {
     //add new user
     if (form.value._id == "") {
