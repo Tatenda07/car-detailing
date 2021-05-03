@@ -53,12 +53,15 @@
 
 .second-container .box .imgBx{
     width: 1000px;
-    height: 1000px;
+    height: 1300px;
     overflow: hidden;
     transform: 0.5s;
     display: flex;
     flex-direction: row;
+        
 }
+
+
 
 .second-container .box .imgBx:hover{
     z-index: 1;
