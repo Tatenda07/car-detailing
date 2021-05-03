@@ -161,32 +161,32 @@ p{
 .middle-container{
     display: flex;
     background-color: #19191d;
-    height: 750px;
-    flex-wrap: wrap;
-    flex-direction: row;
+    height: 950px;
+
+ 
 }
 
 .container-content{
     max-width: 700px;
     padding: 50px;
-    margin-left: 50px;
+  
 }
 
 .second-container-content{
     max-width: 700px;
     padding: 50px;
-    margin-left: 100px;
+
 }
 
 .third-container-content{
     max-width: 700px;
     padding: 50px;
-    margin-left: 200px;
+    
 }
 
 .line-container{
     background-color: #19191d;
-    height: 500px;
+    height: 350px;
     margin: 0%;
     padding: 0%;
 }
@@ -217,26 +217,26 @@ hr.one{
 
 .img-products .img1{
     margin-top: 75px;
-    max-width: 500px;
-    max-height: 200px;
+    max-width: 200px;
+    max-height: 100px;
 }
 
 .img-products .img2{
     margin-top: 75px;
-    max-width: 500px;
-    max-height: 200px;
+    max-width: 250px;
+    max-height: 100px;
 }
 
 .img-products .img3{
     margin-top: 100px;
-    max-width: 700px;
-    max-height: 100px;
+    max-width: 300px;
+    max-height: 90px;
 }
 
 .img-products .img4{
 
-    max-width: 700px;
-    max-height: 300px;
+    max-width: 400px;
+    max-height: 200px;
 }
 
 .footer-container {
@@ -247,7 +247,7 @@ hr.one{
 
 .footer {
     width: 80%;
-    height: 20vh;
+    height: 25vh;
     background-color: lightgray;
     color: red;
     display: flex;
@@ -326,3 +326,22 @@ hr.one{
     transition: all 0.4s ease-out;
 }
 
+
+@media only screen and (max-width: 1050px) {
+.row{
+
+    height: 88%;
+    align-items: center;
+    padding: 80px;
+    background-image: url(../../../assets/pic-7.png);
+    background-size: 100%;
+}
+.col {
+    flex-basis: initial;
+}
+}
+
+@media only screen and (max-width:960) {
+   
+      
+   } 

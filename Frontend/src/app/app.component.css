@@ -54,3 +54,19 @@ a {
     box-sizing: border-box;
     text-decoration: none;
 }
+@media only screen and (max-width:1050px){
+
+  li {
+    display: inline-block;
+    list-style-type: none; 
+    margin-left: 0;
+    padding: 15px 15px 15px 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    }
+img {
+    width: 70px;
+    height: 70px;
+}
+}
