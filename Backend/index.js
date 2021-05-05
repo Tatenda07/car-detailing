@@ -18,6 +18,7 @@ app.use(passport.initialize());
 const userController = require('./controllers/userController');
 const serviceController = require('./controllers/serviceController');
 const customerController = require('./controllers/customerController');
+const servicesBooking = require('./controllers/services_bookingController');
 
 
 //handle validation errors within the application
@@ -37,3 +38,4 @@ app.listen(_port, (err) => {
 app.use('/users', userController);
 app.use('/services', serviceController);
 app.use('/customers', customerController);
+app.use('/servicesBooking', servicesBooking);

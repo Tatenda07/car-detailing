@@ -8,14 +8,14 @@ const Services_booking = mongoose.model('Services_booking');
 
 //book service
 router.post('/',(req, res, next) => {
-    const newService = new Service (req.body);
+    const newServiceBooking = new Services_booking (req.body);
 
-    newServices_booking.save((err, doc) => {
+    newServiceBooking.save((err, doc) => {
         if(!err)
             res.send(doc);
        
-            else {
-                return next(err);
+        else {
+            return next(err);
         }
     })
 

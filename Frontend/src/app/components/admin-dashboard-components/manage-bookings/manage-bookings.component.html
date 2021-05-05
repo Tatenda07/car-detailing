@@ -1,0 +1,125 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<main>
+  <div class="admin-wrapper">
+    <!--left sidebar-->
+    <div class="left-sidebar">
+        <ul>
+            <li><a routerLink="/manageBookings">Manage Bookings Log</a></li>
+            <li><a routerLink="/manageServices">Manage Services</a></li>
+            <li><a routerLink="/manageCustomers">Manage Customers</a></li>
+            <li><a routerLink="/manageUsers">Manage Users</a></li>
+            <li><a class="logout" style="color: red; cursor: pointer" (click) = 'onLogout()'>Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Admin content -->
+    <div class="admin-content">
+      <div class="content">
+        <div *ngIf="userDetails">
+          <h3>Hello, {{userDetails.fname}} </h3>
+          <p style="font-style: italic;"><b>Username:</b> {{userDetails.username}}
+          <b> Role:</b> {{userDetails.role}}
+          <b> Email:</b> {{userDetails.email}}</p>
+          <h5>Admin Dashboard: Manage Booked Services</h5>
+        </div>
+        <button (click)=toggleDisplayDivIf() >Book a new Service</button>
+      </div>
+
+      <div id="services-wrapper">
+        <div id="customers" style="display: flex;">
+          <div class="col s5" style="flex: 2; border-right: cadetblue 1px solid;" *ngIf="!showHideCustomersForm">
+            <div>
+              <form #bookingForm="ngForm" (ngSubmit)="onSubmitBooking(bookingForm)" autocomplete="off">
+                <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="bookingService.selectedBooking._id">
+                    <p style="text-align: center; color:  cadetblue;">Edit or Update Booked Service</p>
+                    <input type="hidden" name="_id" >
+                    <div class="row">
+                      <div class="col s12">
+                        <label class="green-text">Full Name :
+                          <label class="red-text">*</label>
+                        </label>
+                        <input type="text" name="customerFullname" #customerFullname="ngModel" [(ngModel)]=" bookingService.selectedBooking.customerFullname" placeholder="Full Name" required>
+
+                        <label class="green-text">Email :
+                          <label class="red-text">*</label>
+                        </label>
+                        <input type="text" name="email" #email="ngModel" [(ngModel)]=" bookingService.selectedBooking.email" placeholder="Email" required>
+
+                        <label class="green-text">Phone Number :
+                          <label class="red-text">*</label>
+                        </label>
+                        <input type="text" name="phoneNumber" #phoneNumber="ngModel" [(ngModel)]=" bookingService.selectedBooking.phoneNumber" placeholder="Phone Number" required>
+
+                        <label class="green-text">Booked Service :
+                          <label class="red-text">*</label>
+                        </label>
+                        <input type="text" name="bookedService" #bookedService="ngModel" [(ngModel)]=" bookingService.selectedBooking.bookedService" placeholder="Booked Service" required>
+
+                        <label class="green-text">Car Model :
+                          <label class="red-text">*</label>
+                        </label>
+                        <input type="text" name="carModel" #carModel="ngModel" [(ngModel)]=" bookingService.selectedBooking.carModel" placeholder="Car Model" required>
+
+                        <label class="green-text">Date :
+                          <label class="red-text">*</label>
+                        </label>
+                        <input type="text" name="date" #date="ngModel" [(ngModel)]=" bookingService.selectedBooking.date" placeholder="MM/DD/YYYY HH:mm AM/PM" required>
+
+                        <label class="green-text">Message :
+                          <label class="red-text">*</label>
+                        </label>
+                        <input type="text" name="message" #message="ngModel" [(ngModel)]=" bookingService.selectedBooking.message" placeholder="Message" required>
+
+                        <button class="btn btn-custom right" type="button" (click)="resetBookingForm()">Cancel</button>
+                        <button class="btn btn-custom right" type="submit" [disabled]="!bookingForm.valid">Submit</button>
+                      </div>
+                    </div>
+              </form>
+            </div>
+          </div>
+
+          <table class="responsive-table highlight" style="flex: 8;">
+            <thead>
+              <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Booked Service</th>
+                <th>Car Model</th>
+                <th>Date</th>
+                <th>Message</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let booking of bookingService.bookingLog">
+                <td>{{ booking.customerFullname }}</td>
+                <td>{{ booking.email }}</td>
+                <td>{{ booking.phoneNumber }}</td>
+                <td>{{ booking.bookedService }}</td>
+                <td>{{ booking.carModel }}</td>
+                <td>{{ booking.date }}</td>
+                <td>{{ booking.message }}</td>
+                <td>
+                  <!-- edit button -->
+                  <a class="action-btn edit" title="Edit or update Customer">
+                    <i class="material-icons" (click)="onEditBooking(booking)">edit</i>
+                  </a>
+                  <!-- delete button -->
+                  <a class="action-btn delete" title="Delete Customer">
+                    <i class="material-icons" (click)="onDeleteBooking(booking._id)">delete</i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+

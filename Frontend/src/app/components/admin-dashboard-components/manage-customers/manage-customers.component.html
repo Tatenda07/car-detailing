@@ -5,6 +5,7 @@
     <!--left sidebar-->
     <div class="left-sidebar">
         <ul>
+            <li><a routerLink="/manageBookings">Manage Bookings Log</a></li>
             <li><a routerLink="/manageServices">Manage Services</a></li>
             <li><a routerLink="/manageCustomers">Manage Customers</a></li>
             <li><a routerLink="/manageUsers">Manage Users</a></li>
@@ -80,10 +81,10 @@
             </thead>
             <tbody>
               <tr *ngFor="let customer of customersService.customersList">
-                <td>{{ customer.firstName }} {{ customer.lastName }}</td> 
-                <td>{{ customer.email }}</td> 
-                <td>{{ customer.address }}</td> 
-                <td>{{ customer.phoneNumber }}</td> 
+                <td>{{ customer.firstName }} {{ customer.lastName }}</td>
+                <td>{{ customer.email }}</td>
+                <td>{{ customer.address }}</td>
+                <td>{{ customer.phoneNumber }}</td>
                 <td>
                   <!-- edit button -->
                   <a class="action-btn edit" title="Edit or update Customer">

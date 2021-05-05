@@ -19,6 +19,7 @@ import { TeamComponent } from './components/team/team.component';
 import { GlassCoatingComponent } from './components/services/glass-coating/glass-coating.component';
 import { PaintJobComponent } from './components/services/paint-job/paint-job.component';
 import { TintServicesComponent } from './components/services/tint-services/tint-services.component';
+import { ManageBookingsComponent } from './components/admin-dashboard-components/manage-bookings/manage-bookings.component';
 
 
 
@@ -32,6 +33,7 @@ const routes: Routes = [
 { path: 'manageServices', component: ManageServicesComponent, canActivate: [AuthGuard]},
 { path: 'manageCustomers', component: ManageCustomersComponent, canActivate: [AuthGuard]},
 { path: 'manageUsers', component: ManageUsersComponent, canActivate: [AuthGuard]},
+{ path: 'manageBookings', component: ManageBookingsComponent, canActivate: [AuthGuard]},
 { path: 'sign-up', component: SignUpComponent},
 { path: 'login', component: LoginComponent},
 { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -56,6 +58,7 @@ export const routingComponents = [
   ManageServicesComponent,
   ManageCustomersComponent,
   ManageUsersComponent,
+  ManageBookingsComponent,
   SignUpComponent,
   LoginComponent
 ]

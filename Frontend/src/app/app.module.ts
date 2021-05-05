@@ -28,8 +28,6 @@ import { CarwashComponent } from './components/services/carwash/carwash.componen
     PaintJobComponent,
     TintServicesComponent,
     CarwashComponent,
-    
-
   ],
   imports: [
     BrowserModule,
