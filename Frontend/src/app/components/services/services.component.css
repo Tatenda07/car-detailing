@@ -43,7 +43,7 @@
     color: black;
 }
 
-/* FIRST CONTAINER */
+/* SECOND CONTAINER */
 
 .second-container .box{
     display: flex;
@@ -53,7 +53,7 @@
 
 .second-container .box .imgBx{
     width: 1000px;
-    height: 1300px;
+    height: 700px;
     overflow: hidden;
     transform: 0.5s;
     display: flex;
