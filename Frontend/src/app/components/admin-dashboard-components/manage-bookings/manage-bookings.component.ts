@@ -79,7 +79,7 @@ export class ManageBookingsComponent implements OnInit {
 
   //delete booking
   onDeleteBooking(_id: string){
-    if(confirm('Are you sure you want to delete this customer?') == true) {
+    if(confirm('Are you sure you want to delete this booking record?') == true) {
       this.bookingService.deleteServiceBooking(_id).subscribe((res) => {
         this.refreshBookingLog();
         alert('Booking Deleted Successfully');

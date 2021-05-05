@@ -12,100 +12,25 @@
 <body>
     <div class="first-container">
         <div class="qoute-box">
-            <h1>RESERVE YOUR SPOT NOW!</h1>
+            <h1>PAINT JOB SERVICES</h1>
         </div>
-        <Div class="qoute-box-message">
-            <a href="contact-us" class="btn-one">PAINT PROTECTION & ENHANCEMENT SERVICES</a>
-        </Div>
-    </div>
-    
-    <div class="alt-contact-section">
-        <div class="alt-contact-container">
-            <div id="DIV_1">
-                    <div id="DIV_2">
-                        <form id="FORM_3" name="wf-form-Contact-Form">
-                            <div id="DIV_4">
-                                <label for="Full-Name" id="LABEL_5">
-                                    Name*
-                                </label>
-                                <input type="text" maxlength="256" name="Full-Name" placeholder="First and Last Name" id="INPUT_6" />
-                            </div>
-                            <div id="DIV_7">
-                                <label for="Email" id="LABEL_8">
-                                    Email Address*
-                                </label>
-                                <input type="email" maxlength="256" name="Email" placeholder="Your Email Address" id="INPUT_9" />
-                            </div>
-                            <div id="DIV_10">
-                                <label for="Phone" id="LABEL_11">
-                                    Phone Number*
-                                </label>
-                                <input type="tel" maxlength="256" name="Phone" placeholder="Please enter your phone number" id="INPUT_12" />
-                            </div>
-                            <div id="DIV_13">
-                                <label for="Service-Select" id="LABEL_14">
-                                    Select Service*
-                                </label>
-                                <select id="SELECT_15" name="Service-Select">
-                                    <option value="Clear Bra" id="OPTION_16">
-                                        Car Wash 
-                                    </option>
-                                    <option value="New Car Protection" id="OPTION_17">
-                                        Tint Service
-                                    </option>
-                                    <option value="Ceramic Coating" id="OPTION_18">
-                                        Paint Correction
-                                    </option>
-                                    <option value="Paint Correction" id="OPTION_19">
-                                        Paint Job Service
-                                    </option>
-                                    <option value="Additional Services" id="OPTION_20">
-                                        Additional Services
-                                    </option>
-                            
-                                </select>
-                            </div>
-                            <div id="DIV_22">
-                                <label for="Car-Make" id="LABEL_23">
-                                    Car make and model?
-                                </label>
-                                <input type="text" maxlength="256" name="Car-Make" placeholder="What is your car make and model?" id="INPUT_24" />
-                            </div>
-                            <div id="DIV_25">
-                                <label for="Message-Area" id="LABEL_26">
-                                    Message
-                                </label>
-                                <textarea placeholder="Tell us a little bit about what you're looking for" id="TEXTAREA_27" name="Message-Area">
-                                </textarea>
-                            </div>
-                            <input type="submit" value="Submit" id="INPUT_28" />
-                        </form>
-                        <div id="DIV_29">
-                            <div id="DIV_30">
-                                Thank you! Your submission has been received!
-                            </div>
-                        </div>
-                        <div id="DIV_31">
-                            <div id="DIV_32">
-                                Oops! Something went wrong while submitting the form.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <p id="P_33">
-                    Motora Automotive Group<br id="BR_34" />Sucat, Paranaque Metro Manila<br id="BR_35" />UPS IV WEST, 113 CAMIA<br id="BR_36" />‍<br id="BR_37" />Get Directions<br id="BR_38" />P: (714) 356-5145<br id="BR_39" />‍<br id="BR_40" />motoraautomotivegroup@yahoo.com<br id="BR_41" />Business Hours<br id="BR_42" />Monday - Friday (By Appointment Only)<br id="BR_43" />7:00am - 4:00pm<br id="BR_44" /><br id="BR_45" />Motora Automotive Group Serves Car work and paint works on Philippines
-            </p>
+        <div style="display: flex;">
+          <div class="qoute-box-message">
+            <a routerLink = "/services" class="btn-one">GO BACK TO ALL SERVICES</a>
+          </div>
+          <div class="qoute-box-message">
+            <a routerLink = "/servicesBooking" class="btn-one">BOOK SERVICES WITH US TODAY</a>
+          </div>
         </div>
-        
     </div>
 
     <div class="third-content-section">
         <div class="body-content">
             <div class="first-body-content">
                 <h1> COMPLETE PAINT SERVICE </h1>
-            
+
                 <p>Starting at ₱20,000 </p>
-            
+
             </div>
 
             <div class="second-body-content">
@@ -144,10 +69,10 @@
         <div class="footer">
             <div class="footer-heading footer-1">
                 <h2>PAGES</h2>
-                <a href="#">Home</a>
-                <a href="#">Products</a>
-                <a href="#">Services</a>
-                <a href="#">Account</a>
+                <a routerLink="/home">Home</a>
+                <a routerLink="/about">About</a>
+                <a routerLink="/services">Services</a>
+                <!-- <a href="#">Account</a> -->
             </div>
             <div class="footer-heading footer-2">
                 <h2>CONTACT US</h2>

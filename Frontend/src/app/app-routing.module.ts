@@ -20,6 +20,7 @@ import { GlassCoatingComponent } from './components/services/glass-coating/glass
 import { PaintJobComponent } from './components/services/paint-job/paint-job.component';
 import { TintServicesComponent } from './components/services/tint-services/tint-services.component';
 import { ManageBookingsComponent } from './components/admin-dashboard-components/manage-bookings/manage-bookings.component';
+import { BookServicesFormComponent } from './components/book-services-form/book-services-form.component';
 
 
 
@@ -36,6 +37,7 @@ const routes: Routes = [
 { path: 'manageBookings', component: ManageBookingsComponent, canActivate: [AuthGuard]},
 { path: 'sign-up', component: SignUpComponent},
 { path: 'login', component: LoginComponent},
+{ path: 'servicesBooking', component: BookServicesFormComponent},
 { path: '', redirectTo: '/home', pathMatch: 'full'},
 { path: 'team', component: TeamComponent},
 { path: 'carwash', component: CarwashComponent},

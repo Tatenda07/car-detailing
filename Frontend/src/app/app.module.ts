@@ -15,6 +15,7 @@ import { GlassCoatingComponent } from './components/services/glass-coating/glass
 import { PaintJobComponent } from './components/services/paint-job/paint-job.component';
 import { TintServicesComponent } from './components/services/tint-services/tint-services.component';
 import { CarwashComponent } from './components/services/carwash/carwash.component';
+import { BookServicesFormComponent } from './components/book-services-form/book-services-form.component';
 
 
 
@@ -28,6 +29,7 @@ import { CarwashComponent } from './components/services/carwash/carwash.componen
     PaintJobComponent,
     TintServicesComponent,
     CarwashComponent,
+    BookServicesFormComponent,
   ],
   imports: [
     BrowserModule,
