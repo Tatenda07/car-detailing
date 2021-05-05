@@ -31,8 +31,12 @@ export class SignUpComponent implements OnInit {
         if (err.status === 422) {
           this.serverErrorMessages = err.error.join('<br/>');
         }
-        else
+        else if (err.status === 0) {
+          this.serverErrorMessages = 'Server connection failed. Please check your server connection.'
+        }
+        else {
           this.serverErrorMessages = 'Something went wrong. Please contact admin.';
+        }
       }
     );
   }
