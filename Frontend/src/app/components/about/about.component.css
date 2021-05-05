@@ -498,18 +498,18 @@ a.button {
 
   
   @media only screen and (max-width: 900px) {
-    #teamdetails {
-      width: unset;
-      padding-left: unset;
-    }
+   
+    
     li {
       padding-left: unset;
     }
     .profile_container {
-      width: 100%;
+      width: 150px
+      
     }
     #teamcontent .bigimg {
       margin: 2rem 0;
+     
     }
     .bigimg-overlay {
       opacity: 1;
@@ -517,12 +517,13 @@ a.button {
     .team li {
       margin-right: unset;
       width: 100%;
+      flex-direction: row;
     }
     #wrapper_team {
       padding: 0;
     }
     .clearfix {
-      flex-flow: column nowrap;
+      flex-flow: nowrap;
     }
   }
   
@@ -577,7 +578,7 @@ a.button {
     }
     .third-content .third-content-pic .pic1{
     width: 900px;
-    margin-left: 50px;
+    margin-left: 60px;
     padding:50px 50px 0 50px;
     filter: drop-shadow(.75em .75em .5em);
     }
@@ -591,17 +592,27 @@ a.button {
    
   
     }
-    .footer {
-        height: 50vh;
+    .about-item a{
+        text-decoration: none;
+    }
+    .footer-container {
+        height: 70vh;
+        padding: 20px;
     }
     .footer-email-form {
-        margin-top: 4rem;
+       margin-left: 8rem;
     }
     
     
    
 }
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 934px) {
+    .third-content .third-content-pic .pic1{
+        width: 800px;
+        margin-left: 30px;
+        padding:50px 50px 0 50px;
+        filter: drop-shadow(.75em .75em .5em);
+    }
     .footer {
         padding-top: 2rem;
     }
