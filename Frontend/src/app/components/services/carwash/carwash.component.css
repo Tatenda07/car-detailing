@@ -17,7 +17,7 @@
     font-family: 'Montserrat', sans-serif;
     padding-top: 100px;
     color: whitesmoke;
-    font-size: 45px;
+    font-size: 35px;
     letter-spacing: 20px;
 
 }
@@ -49,7 +49,7 @@
 
 .fourth-content-section {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     font-family: 'Saira Extra Condensed', sans-serif;
     background-image: linear-gradient(
 180deg
@@ -62,26 +62,26 @@
 
 }
 
-.first-body-content {
-    max-width: 600px;
-    width: 100%;
-    font-size: 40px;
-    margin-left: 300px;
+.first-body-content h1{
+ font-size: 100px;
+ text-align: center;
 }
 
-.second-body-content {
-    max-width: 400px;
-    width: 100%;
-    font-size: 30px;
-    margin-left: 300px;
+.first-body-content p{
+font-size: 30px;
+text-align: center;
+}
+
+.second-body-content p{
+font-size: 30px;
+margin: 50px 30px 0 0;
 }
 
 .image-body-content .pic1{
-    margin-right: 300px;
-    margin-top: 50px;
+    margin:100px 200px 200px 200px  ;
     filter: drop-shadow(0.7em .75em .5em);
     border-radius: 20px;
-    max-width: 1000px;
+    width: 800px;
 }
 
 .third-content-section {
@@ -93,6 +93,7 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
+    height: 1200px;
 }
 
 .body-two-content {
@@ -101,14 +102,20 @@
     font-size: 40px;
     color: whitesmoke;
     position: relative;
-    margin-right: 500px;
+    margin-right: 300px;
 }
 
-.fourth-body-content {
-    max-width: 600px;
+.fourth-body-content h1 {
+
     width: 100%;
     font-size: 30px;
+    text-align: center;
+    font-size: 50px;
     
+}
+.fourth-body-content p{
+text-align: justify;
+width: 350px;
 }
 
 .image-two-body-content .pic1{
