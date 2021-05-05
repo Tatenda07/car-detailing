@@ -5,7 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent} from './components/contact/contact.component';
 import { ServicesComponent } from './components/services/services.component';
-import { AccountComponent } from './components/account/account.component';
+//import { AccountComponent } from './components/account/account.component';
 import { ManageServicesComponent } from './components/admin-dashboard-components/manage-services/manage-services.component';
 import { ManageCustomersComponent } from './components/admin-dashboard-components/manage-customers/manage-customers.component';
 import { ManageUsersComponent } from './components/admin-dashboard-components/manage-users/manage-users.component';
@@ -30,7 +30,7 @@ const routes: Routes = [
 { path: 'about', component: AboutComponent},
 { path: 'contact', component: ContactComponent},
 { path: 'services', component: ServicesComponent},
-{ path: 'account', component: AccountComponent},
+//{ path: 'account', component: AccountComponent},
 { path: 'manageServices', component: ManageServicesComponent, canActivate: [AuthGuard]},
 { path: 'manageCustomers', component: ManageCustomersComponent, canActivate: [AuthGuard]},
 { path: 'manageUsers', component: ManageUsersComponent, canActivate: [AuthGuard]},
@@ -56,7 +56,7 @@ export const routingComponents = [
   AboutComponent,
   ContactComponent,
   ServicesComponent,
-  AccountComponent,
+  //AccountComponent,
   ManageServicesComponent,
   ManageCustomersComponent,
   ManageUsersComponent,
