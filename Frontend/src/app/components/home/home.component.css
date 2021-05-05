@@ -389,7 +389,7 @@ p{
 }
 }
 
-@media only screen and (max-width:815px) {
+@media only screen and (max-width:934px) {
     .row{
 
         height: 88%;
@@ -413,5 +413,27 @@ p{
         height: 250px;
         width: 350px;
 }   
-  
+.img-products .img1{
+    margin-top: 50px;
+    max-width: 150px;
+    max-height: 100px;
+
+}
+.img-products .img2{
+    margin-top: 50px;
+    max-width: 100px;
+    max-height: 100px;
+
+}
+.img-products .img3{
+    margin-top: 50px;
+    max-width: 250px;
+    max-height: 70px;
+
+}
+.img-products .img4{
+    margin-top: 50px;
+    max-width: 150px;
+    max-height: 150px;
+}
 }
